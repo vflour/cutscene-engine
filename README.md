@@ -62,7 +62,7 @@ An action is a type of command that will execute in the frame. This can be anyth
 The data for the action will depend on what data the Action type might require. The action types are stored as module scripts under Engine/Components/Actions/.
 Generally speaking, there are no rules for the Action data as long as it contains all the fields that the module needs. However, here are some names I tend to use:
 
-* ``ref`` usually pinpoints to a reference in the References table. However, it could also point to a reference in the objects table. This is usually when the Engine script tries to load an Audio or Video asset.
+* ``ref`` usually points to a reference in the References table. However, it could also point to a reference in the objects table. This is usually when the Engine script tries to load an Audio or Video asset.
 
 ## Engine
 For now, it's only able to run a cutscene from a table. Will add more functionality (such as pausing, stopping, etc.) in the near future.
