@@ -22,12 +22,16 @@ Contains a list of all the frames and references that are used in the cutscene.
 ```
 ### Reference
 References are external objects loaded into the cutscene. They will either contain a path or a "special" value (such as %LOCALPLAYER%, more on that later)
+When a cutscene is loaded, all objects are cloned into a folder. The Action script will then figure out what to do with the reference when it is being called.
 ```
 {
   Type = "ReferenceType",
   Path = "ReplicatedStorage.MyModel"
 }
 ```
+
+* Path is an absolute path to an instance in the game. Make sure that the instance will reside there when the cutscene is loaded, otherwise it will not work.
+* Path can also be %LOCALPLAYER%, which is essentially a way to tell the script to clone the local player's character when the cutscene is loaded.
 
 ### Frame
 A frame is a sequence of actions in a cutscene. Every time a cutscene plays, every action will be executed at once. The script will then yield until the Wait Event has fired.
