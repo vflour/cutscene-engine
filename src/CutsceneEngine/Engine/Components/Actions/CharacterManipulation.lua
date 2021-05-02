@@ -1,5 +1,15 @@
 local Settings = require(script.Parent.Parent.Parent.Settings)
 
+--[[
+    DATA:
+    >> ref (number) Reference index to the character's model
+    >> CFrame (CFrame) Starting CFrame position of the character's model
+    >> [MoveTo] (Vector3) Vector3 used to call MoveTo() on the character's humanoid, used to make the character walk to a point
+    >> [Animation]
+        >> ref (number) Reference index pointing to the animation instance in the objects table
+        >> Id (string) The id of the animation
+]]--
+
 function CharacterManipulation(objects, data)
     local character = objects.References[data.ref]
     local humanoid = character:FindFirstChildOfClass("Humanoid")

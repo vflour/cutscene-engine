@@ -1,3 +1,12 @@
+
+--[[
+    DATA:
+    >> ref (number) The reference index of the screeneffect, which will be stored in the assets folder and removed when the cutscene exits
+    >> Effects (table) A table representing all of the effects that are affected. Each effect is a table that contains the properties that are changed.
+        >> Effect Name (table)
+            >> Property (any)
+]]--
+
 return function(objects, data)
     local effects = objects.Assets[data.ref]
     

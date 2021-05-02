@@ -87,6 +87,7 @@ function LoadReferences(refs)
             reference = pathReference:Clone()
             reference.Name = i
             reference.Parent = game.ReplicatedStorage[Settings.TempFolder]
+            pathReference.Archivable = false
         elseif typeof(pathReference)=="table" then
             reference = pathReference
         end
